@@ -1,0 +1,27 @@
+1.打开git bash
+2.cd ~/.ssh
+3.ssh-keygen -t rsa -b 4096 -C"1048749977@qq.com"
+3.没有公匙文件时 ssh-keygen -t rsa -C "1048749977@qq.com"
+4.Generating public/private rsa key pair.
+   Enter file in which to save the key (/c/Users/lin/.ssh/id_rsa):（按回车）
+5./c/Users/lin/.ssh/id_rsa already exists.
+   Overwrite (y/n)? y（y确认覆盖）
+6.Enter passphrase (empty for no passphrase):（输入新密码）
+7.Enter same passphrase again:（再次输入新密码）
+8.Your identification has been saved in /c/Users/lin/.ssh/id_rsa.
+Your public key has been saved in /c/Users/lin/.ssh/id_rsa.pub.（成功了，找到这个id_rsa.pub，打开复制内容，在github的sittings中添加ssh keys，填入key中，title可任意填写）
+The key fingerprint is:
+SHA256:FfdftydUJgNRdHpg6zbadQb4bPuwSkRyfJmkVKAM3Yg 1048749977@qq.com
+The key's randomart image is:
++---[RSA 4096]----+
+|        .o.o*BX +|
+|        Eoo*.* % |
+|          = * X +|
+|         . + * ++|
+|        S   . O.*|
+|           . = *o|
+|            o +  |
+|           .   + |
+|            ... .|
++----[SHA256]-----+
+(ssh -T git@github.com测试key是否正常工作)

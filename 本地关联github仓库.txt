@@ -1,0 +1,5 @@
+git init                  //本地仓库初始化，会生成一个.git的隐藏目录
+git add .               //添加所有文件
+git commit -m "注释"
+git remote add origin git@github.com:.....git.git           //换成自己仓库的SSH
+git push -u origin master              //第一次使用加上了-u参数，是推送内容并关联分支
